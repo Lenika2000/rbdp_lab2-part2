@@ -1,9 +1,6 @@
 package group.moveon;
 
-import group.moveon.command.AuthCommand;
-import group.moveon.command.Command;
-import group.moveon.command.FindCommand;
-import group.moveon.command.SolveCommand;
+import group.moveon.command.*;
 
 import java.io.IOException;
 import java.rmi.NotBoundException;
@@ -41,6 +38,7 @@ public class Main {
         HashMap<String, Command> commands = new HashMap<String, Command>();
         commands.put("solve", solveCommand);
         commands.put("find", findCommand);
+        commands.put("quit",  new QuitCommand());
         return commands;
     }
 

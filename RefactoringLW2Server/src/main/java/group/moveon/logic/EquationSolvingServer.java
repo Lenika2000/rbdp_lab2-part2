@@ -38,7 +38,7 @@ public class EquationSolvingServer implements EquationSolver {
             res[1] = se.getResult()[1];
 
             String equation = params[0] + "*x^2+(" + params[1] + "*x)+(" + params[2] + ")=0";
-            String solution = "x=" + res[0] + "," + res[2];
+            String solution = "x=" + res[0] + "," + res[1];
             equationResultDao.addEquationResult(new EquationResult(0, equation, solution, user));
 
             return solution;
